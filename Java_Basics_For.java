@@ -126,6 +126,8 @@ public class Java_Basics_For{
 }
 */
 
+
+/*
 //Write a program that prompts the user for a positive integer and then prints out a triangle of asterisks with the base equal to that integer, using a for loop.
 
 import java.util.Scanner;
@@ -149,4 +151,29 @@ public class Java_Basics_For{
 
     }
 }
+*/
 
+//Write a program that prompts the user for a positive integer and then prints out all the factors of that integer, using a for loop.
+import java.util.Scanner;
+
+public class Java_Basics_For{
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Please enter a postive integer:");
+        int number = sc.nextInt();
+
+        System.out.print("The factors of "+number+" are: ");
+        for(int i=1;i<=number;i++){
+            int j = number%i;
+            if(j==0 && i!=number){
+                System.out.print(i+", ");
+            }
+            else if(j==0 && i==number){
+                System.out.print(i);
+            }
+        }
+
+    }
+}
