@@ -153,6 +153,7 @@ public class Java_Basics_For{
 }
 */
 
+/*
 //Write a program that prompts the user for a positive integer and then prints out all the factors of that integer, using a for loop.
 import java.util.Scanner;
 
@@ -173,6 +174,36 @@ public class Java_Basics_For{
             else if(j==0 && i==number){
                 System.out.print(i);
             }
+        }
+
+    }
+}
+*/
+
+//Write a program that prompts the user for a positive integer and then prints out whether that integer is a prime number or not, using a for loop to check all possible factors.
+import java.util.Scanner;
+
+public class Java_Basics_For{
+    public static void main(String[] args){
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Please enter a postive integer:");
+        int number = sc.nextInt();
+
+        int NumOfFactors = 0;
+        for(int i=1;i<=number;i++){
+            int j = number%i;
+
+            if(j==0){
+                NumOfFactors++;
+            }
+        }
+        if (NumOfFactors==2){
+            System.out.print(number+" is a prime number");
+        }
+        else{
+            System.out.print(number+" is not a prime number");
         }
 
     }
